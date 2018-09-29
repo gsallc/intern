@@ -16,7 +16,7 @@ class BlackModelNormal:
         return (fwd - K) * norm.cdf(d) + sigT * norm.pdf(d)
     
     def price_digital_call(self,fwd,K,modVol,T):
-        """ Gives Price of call option
+        """ Gives Price of digital call option
         >>> call = BlackModelNormal()
         >>> price = call.price_digital_call(0.01,0.01,1,1)
         >>> print(price)
@@ -27,7 +27,7 @@ class BlackModelNormal:
         return 1 - norm.cdf(d)
     
     def delta(self,fwd,K,modVol,T):
-        """ Gives Price of call option
+        """ Gives delta of call option
         >>> call = BlackModelNormal()
         >>> delta = call.delta(0.01,0.01,1,1)
         >>> print(delta)
