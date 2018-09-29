@@ -9,7 +9,7 @@ class BlackModelNormal:
         >>> model = BlackModelNormal()
         >>> price = model.price_call(0.01,0.01,1,1)
         >>> print(price)
-        0.3989422804014327
+        0.398942280401
         """
         sigT = modVol * math.sqrt(T)
         d = (fwd - K) / sigT 
